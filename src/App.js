@@ -13,7 +13,11 @@ class App extends Component {
             <Header/>
             </div>
             </div>
+            <div className="row">
+            <div className="col-12 text-center">
             <Footer/>
+            </div>
+            </div>
             </div>
         )
     }

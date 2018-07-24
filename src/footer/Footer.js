@@ -6,8 +6,7 @@ import './Footer.css'
 class Footer extends Component {
     render() {
         return (
-            <div className="row">
-            <div className="col-12 text-center">
+            <div>
             <hr/>
             Creado por <a href="https://github.com/AlbertSanIza" target="_blank" rel="noopener noreferrer">Albert Sanchez</a>
             <br/>
@@ -17,7 +16,6 @@ class Footer extends Component {
             <a href="https://github.com/BatallaDeMaestros" target="_blank" rel="noopener noreferrer">
             <img className="logo" src={githubLogo} alt=""/>
             </a>
-            </div>
             </div>
         )
     }
