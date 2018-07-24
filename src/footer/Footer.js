@@ -12,10 +12,10 @@ class Footer extends Component {
             Creado por <a href="https://github.com/AlbertSanIza" target="_blank" rel="noopener noreferrer">Albert Sanchez</a>
             <br/>
             <a href="https://www.instagram.com/albertsaniza/" target="_blank" rel="noopener noreferrer">
-            <img src={instagramLogo} className="logo"/>
+            <img className="logo" src={instagramLogo} alt=""/>
             </a>
             <a href="https://github.com/BatallaDeMaestros" target="_blank" rel="noopener noreferrer">
-            <img src={githubLogo} className="logo"/>
+            <img className="logo" src={githubLogo} alt=""/>
             </a>
             </div>
             </div>
