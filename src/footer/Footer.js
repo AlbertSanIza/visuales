@@ -9,12 +9,12 @@ class Footer extends Component {
             <div className="row">
             <div className="col-12 text-center">
             <hr/>
-            Creado por <a href="https://github.com/AlbertSanIza" target="_blank">Albert Sanchez</a>
+            Creado por <a href="https://github.com/AlbertSanIza" target="_blank" rel="noopener noreferrer">Albert Sanchez</a>
             <br/>
-            <a href="https://www.instagram.com/albertsaniza/" target="_blank">
+            <a href="https://www.instagram.com/albertsaniza/" target="_blank" rel="noopener noreferrer">
             <img src={instagramLogo} className="logo"/>
             </a>
-            <a href="https://github.com/BatallaDeMaestros" target="_blank">
+            <a href="https://github.com/BatallaDeMaestros" target="_blank" rel="noopener noreferrer">
             <img src={githubLogo} className="logo"/>
             </a>
             </div>
