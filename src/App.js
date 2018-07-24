@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Header from './header/Header.js'
+import Controls from './controls/Controls.js'
 import Footer from './footer/Footer.js'
 import './App.css'
 
@@ -11,6 +12,13 @@ class App extends Component {
             <div className="row">
             <div className="col-12">
             <Header/>
+            </div>
+            </div>
+            <div className="row">
+            <div className="col-4">
+            <Controls/>
+            </div>
+            <div className="col-8">
             </div>
             </div>
             <div className="row">
