@@ -6,18 +6,46 @@
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <title>BDM Visuales</title>
+    <title>BDM MX "Visuales"</title>
 </head>
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="display-3">BDM "Visuales"</h1>
-        </div>
-    </div>
+    <noscript>Es necesario activar JavaScript para correr esta aplicacion.</noscript>
     <div class="container">
-        <div class="">
-            <div id="root"></div>
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-3">Visuales</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card border-dark">
+                    <div class="card-header">Controles</div>
+                    <div class="card-body">
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="number" class="form-control" placeholder="Tiempo" min="0">
+                            <div class="input-group-append">
+                                <span class="input-group-text">Segundos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-outline-primary btn-sm btn-block">Mostrar</button>
+                        <button type="button" class="btn btn-outline-success btn-sm btn-block">Iniciar</button>
+                        <button type="button" class="btn btn-outline-warning btn-sm btn-block">Puasar</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm btn-block">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card border-dark">
+                    <div class="card-header">Vista Anticipada</div>
+                    <div class="card-body"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="root"></div>
+            </div>
         </div>
     </div>
 </body>
