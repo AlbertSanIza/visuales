@@ -4,23 +4,24 @@ class Controls extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            seconds: 0
+            seconds: 0,
+            status: "set"
         }
     }
     inputHandleChange = e => {
         this.setState({seconds: e.target.value})
     }
     setButton = () => {
-        console.log("set")
+        this.setState({status: "isSet"})
     }
     startButton = () => {
-        console.log("start")
+        this.setState({status: "isStart"})
     }
     pauseButton = () => {
-        console.log("pause")
+        this.setState({status: "isSet"})
     }
     resetButton = () => {
-        console.log("reset")
+        this.setState({status: "set"})
     }
     render() {
         return (
@@ -35,10 +36,34 @@ class Controls extends Component {
             <span className="input-group-text">Segundos</span>
             </div>
             </div>
-            <button className="btn btn-outline-primary btn-sm btn-block" type="button" onClick={this.setButton}>Mostrar</button>
-            <button className="btn btn-outline-success btn-sm btn-block" type="button" onClick={this.startButton}>Iniciar</button>
-            <button className="btn btn-outline-warning btn-sm btn-block" type="button" onClick={this.pauseButton}>Puasar</button>
-            <button className="btn btn-outline-danger btn-sm btn-block" type="button" onClick={this.resetButton}>Cancelar</button>
+            {(() => {
+                switch (this.state.status) {
+                    case "set":
+                    return (
+                        <button className="btn btn-outline-primary btn-sm btn-block" type="button" onClick={this.setButton}>Mostrar</button>
+                    )
+                    case "isSet":
+                    case "isPause":
+                    return (
+                        <div className="row">
+                        <div className="col">
+                        <button className="btn btn-outline-danger btn-sm btn-block" type="button" onClick={this.resetButton}>Cancelar</button>
+                        </div>
+                        <div className="col">
+                        <button className="btn btn-outline-success btn-sm btn-block" type="button" onClick={this.startButton}>Iniciar</button>
+                        </div>
+                        </div>
+                    )
+                    case "isStart":
+                    return (
+                        <div>
+                        <button className="btn btn-outline-warning btn-sm btn-block" type="button" onClick={this.pauseButton}>Puasar</button>
+                        </div>
+                    )
+                    default:
+                    return null
+                }
+            })()}
             </div>
             </div>
         )
