@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Header from './header/Header.js'
 import Controls from './controls/Controls.js'
+import VisualizerHolder from './visualizerHolder/VisualizerHolder.js'
 import Footer from './footer/Footer.js'
 import './App.css'
 
@@ -19,6 +20,7 @@ class App extends Component {
             <Controls/>
             </div>
             <div className="col-8">
+            <VisualizerHolder/>
             </div>
             </div>
             <div className="row">
