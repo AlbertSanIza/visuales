@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import "./Visualizer.css"
 
 class Visualizer extends Component {
+    constructor(props) {
+        super(props)
+        window.controls_com.onmessage = ev => {
+            console.log(ev)
+        }
+    }
     render() {
         return (
             <div className="visualizer fade-in">

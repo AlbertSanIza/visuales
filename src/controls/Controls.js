@@ -7,21 +7,28 @@ class Controls extends Component {
             seconds: 0,
             status: "set"
         }
+        window.visualizer_com.onmessage = ev => {
+            console.log(ev)
+        }
     }
     inputHandleChange = e => {
         this.setState({seconds: e.target.value})
     }
     setButton = () => {
         this.setState({status: "isSet"})
+        window.controls_com.postMessage(this.state)
     }
     startButton = () => {
         this.setState({status: "isStart"})
+        window.controls_com.postMessage(this.state)
     }
     pauseButton = () => {
         this.setState({status: "isSet"})
+        window.controls_com.postMessage(this.state)
     }
     resetButton = () => {
         this.setState({status: "set", seconds: 0})
+        window.controls_com.postMessage(this.state)
     }
     render() {
         return (
