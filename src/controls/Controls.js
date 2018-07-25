@@ -14,7 +14,6 @@ class Controls extends Component {
             <span className="input-group-text">Segundos</span>
             </div>
             </div>
-            <button className="btn btn-outline-primary btn-sm btn-block" type="button">Mostrar</button>
             <button className="btn btn-outline-success btn-sm btn-block" type="button">Iniciar</button>
             <button className="btn btn-outline-warning btn-sm btn-block" type="button">Puasar</button>
             <button className="btn btn-outline-danger btn-sm btn-block" type="button">Cancelar</button>
