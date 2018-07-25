@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './header/Header.js'
 import Controls from './controls/Controls.js'
 import VisualizerHolder from './visualizerHolder/VisualizerHolder.js'
+import Visualizer from './visualizer/Visualizer.js'
 import Footer from './footer/Footer.js'
 import './App.css'
 
