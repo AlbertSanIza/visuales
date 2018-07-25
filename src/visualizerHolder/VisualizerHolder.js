@@ -6,7 +6,7 @@ class VisualizerHolder extends Component {
             <div className="card border-dark">
             <div className="card-header">Vista Anticipada</div>
             <div className="card-body">
-            <iframe className="preview" src="https://batallademaestros.github.io/" frameBorder="0"></iframe>
+            <iframe className="preview" src="https://batallademaestros.github.io/" frameBorder="0" title="visualizer"></iframe>
             </div>
             </div>
         )
