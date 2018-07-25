@@ -31,7 +31,7 @@ class Controls extends Component {
             </div>
             <div className="card-body">
             <div className="input-group input-group-sm mb-3">
-            <input className="form-control" type="number" placeholder="Tiempo" min="0" onChange={this.inputHandleChange}/>
+            <input className="form-control" type="number" placeholder="Tiempo" min="5" onChange={this.inputHandleChange}/>
             <div className="input-group-append">
             <span className="input-group-text">Segundos</span>
             </div>
