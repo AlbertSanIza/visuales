@@ -11,5 +11,9 @@
 <body>
     <noscript>Es necesario activar JavaScript para correr esta aplicacion.</noscript>
     <div id="root"></div>
+    <script type="text/javascript">
+        window.controls_com = new BroadcastChannel('controls_com')
+        window.visualizer_com = new BroadcastChannel('visualizer_com')
+    </script>
 </body>
 </html>
