@@ -8,7 +8,7 @@ class Controls extends Component {
             status: "set"
         }
         window.visualizer_com.onmessage = ev => {
-            console.log(ev)
+            console.log(ev.data)
         }
     }
     inputHandleChange = e => {
