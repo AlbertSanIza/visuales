@@ -4,7 +4,9 @@ class Controls extends Component {
     render() {
         return (
             <div className="card border-dark">
-            <div className="card-header">Controles</div>
+            <div className="card-header">
+            <b>Controles</b>
+            </div>
             <div className="card-body">
             <div className="input-group input-group-sm mb-3">
             <input className="form-control" type="number" placeholder="Tiempo" min="0"/>
