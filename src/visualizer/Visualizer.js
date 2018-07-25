@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import "./Visualizer.css"
 
 class Visualizer extends Component {
     render() {
         return (
+            <div className="visualizer">
             <div>
-            I am the Visualizer
+            Visualizer
+            </div>
             </div>
         )
     }
