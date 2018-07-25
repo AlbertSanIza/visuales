@@ -40,7 +40,7 @@ class Controls extends Component {
                 switch (this.state.status) {
                     case "set":
                     return (
-                        <button className="btn btn-outline-primary btn-sm btn-block" type="button" onClick={this.setButton}>Mostrar</button>
+                        <button className="btn btn-outline-primary btn-sm btn-block" type="button" onClick={this.setButton} disabled={!this.state.seconds || this.state.seconds < 5}>Mostrar</button>
                     )
                     case "isSet":
                     case "isPause":
