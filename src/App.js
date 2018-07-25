@@ -10,26 +10,35 @@ import './App.css'
 class App extends Component {
     render() {
         return (
+            <Router>
             <div>
-            <div className="row">
-            <div className="col-12">
-            <Header/>
+            <Route exact path="/" component={({match}) => (
+                <div>
+                <div>
+                <div className="row">
+                <div className="col-12">
+                <Header/>
+                </div>
+                </div>
+                <div className="row">
+                <div className="col-4">
+                <Controls/>
+                </div>
+                <div className="col-8">
+                <VisualizerHolder/>
+                </div>
+                </div>
+                <div className="row">
+                <div className="col-12 text-center">
+                <Footer/>
+                </div>
+                </div>
+                </div>
+                </div>
+            )}/>
+            <Route exact path="/visualizer" component={Visualizer}/>
             </div>
-            </div>
-            <div className="row">
-            <div className="col-4">
-            <Controls/>
-            </div>
-            <div className="col-8">
-            <VisualizerHolder/>
-            </div>
-            </div>
-            <div className="row">
-            <div className="col-12 text-center">
-            <Footer/>
-            </div>
-            </div>
-            </div>
+            </Router>
         )
     }
 }
