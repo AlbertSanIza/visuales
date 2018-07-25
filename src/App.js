@@ -5,7 +5,6 @@ import Controls from './controls/Controls.js'
 import VisualizerHolder from './visualizerHolder/VisualizerHolder.js'
 import Visualizer from './visualizer/Visualizer.js'
 import Footer from './footer/Footer.js'
-import './App.css'
 
 class App extends Component {
     render() {
