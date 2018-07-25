@@ -13,8 +13,7 @@ class App extends Component {
             <Router>
             <div>
             <Route exact path="/" component={({match}) => (
-                <div>
-                <div>
+                <div className="container">
                 <div className="row">
                 <div className="col-12">
                 <Header/>
@@ -31,7 +30,6 @@ class App extends Component {
                 <div className="row">
                 <div className="col-12 text-center">
                 <Footer/>
-                </div>
                 </div>
                 </div>
                 </div>
