@@ -12,7 +12,7 @@ class App extends Component {
             <Router>
             <div>
             <Route exact path="/" component={({match}) => (
-                <div className="container">
+                <div className="container fade-in">
                 <div className="row">
                 <div className="col-12">
                 <Header/>

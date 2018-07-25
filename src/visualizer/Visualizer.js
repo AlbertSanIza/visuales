@@ -4,7 +4,7 @@ import "./Visualizer.css"
 class Visualizer extends Component {
     render() {
         return (
-            <div className="visualizer">
+            <div className="visualizer fade-in">
             <div>
             Visualizer
             </div>
