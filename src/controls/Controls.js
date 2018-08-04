@@ -41,7 +41,7 @@ class Controls extends Component {
                     case "isStart":
                     return (
                         <React.Fragment>
-                        Controles: <Countdown date={Date.now() + (this.state.seconds * 1000)}/>
+                        Controles: <Countdown date={Date.now() + (this.state.seconds * 1000)} renderer={props => <React.Fragment>{props.total / 1000}</React.Fragment>}/>
                         </React.Fragment>
                     )
                     default:
