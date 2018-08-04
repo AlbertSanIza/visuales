@@ -21,7 +21,7 @@ class Visualizer extends Component {
             <Particles className="particles" params={{
                 "particles": {
                     "number": {
-                        "value": 80,
+                        "value": 70,
                         "density": {
                             "enable": true,
                             "value_area": 1400
