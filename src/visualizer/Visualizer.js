@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Particles from 'react-particles-js'
 import bdm_logo from "./bdm.png"
 import "./Visualizer.css"
 
@@ -16,6 +17,7 @@ class Visualizer extends Component {
     render() {
         return (
             <div className="visualizer fade-in">
+            <Particles className="particles"/>
             <img className="bdm-logo" src={bdm_logo} alt="BDMLOGO"/>
             </div>
         )
