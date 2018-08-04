@@ -33,6 +33,7 @@ class Controls extends Component {
     }
     onTick = () => {
         this.setState({seconds: this.state.seconds - 1})
+        window.controls_com.postMessage({seconds: this.state.seconds})
     }
     onComplete = () => {
         this.setState({status: "set", seconds: ""})
