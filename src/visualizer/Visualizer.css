@@ -6,6 +6,8 @@
     left: 0px;
     background: #212121;
     color: white;
+}
+.flex {
     display: flex;
     align-items: center;
     justify-content: center;

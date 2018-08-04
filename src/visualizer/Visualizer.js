@@ -17,7 +17,7 @@ class Visualizer extends Component {
     }
     render() {
         return (
-            <div className="visualizer fade-in">
+            <div className="visualizer flex fade-in">
             <Particles className="particles" params={{
                 "particles": {
                     "number": {
