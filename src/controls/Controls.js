@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Countdown from 'react-countdown-now'
 
 class Controls extends Component {
     constructor(props) {
@@ -34,7 +35,20 @@ class Controls extends Component {
         return (
             <div className="card border-dark">
             <div className="card-header">
-            <b>Controles</b>
+            <b>
+            {(() => {
+                switch (this.state.status) {
+                    case "isStart":
+                    return (
+                        <React.Fragment>
+                        Controles: <Countdown date={Date.now() + (this.state.seconds * 1000)}/>
+                        </React.Fragment>
+                    )
+                    default:
+                    return "Controles"
+                }
+            })()}
+            </b>
             </div>
             <div className="card-body">
             <div className="input-group input-group-sm mb-3">
