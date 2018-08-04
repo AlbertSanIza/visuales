@@ -4,8 +4,8 @@ class Controls extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            seconds: "",
-            status: "set"
+            status: "set",
+            seconds: ""
         }
         window.visualizer_com.onmessage = ev => {
             console.log(ev.data)

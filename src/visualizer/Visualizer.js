@@ -4,8 +4,12 @@ import "./Visualizer.css"
 class Visualizer extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            status: "set",
+            seconds: ""
+        }
         window.controls_com.onmessage = ev => {
-            console.log(ev.data)
+            this.setState(ev.data)
         }
     }
     render() {
@@ -13,6 +17,8 @@ class Visualizer extends Component {
             <div className="visualizer fade-in">
             <div>
             Visualizer
+            <br/>
+            {this.state.status} - {this.state.seconds}
             </div>
             </div>
         )
