@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Particles from 'react-particles-js'
+import puma_logo from "./puma.svg"
 import bdm_logo from "./bdm.png"
 import "./Visualizer.css"
 
@@ -57,6 +58,7 @@ class Visualizer extends Component {
                 }
             }}/>
             <img className="bdm-logo" src={bdm_logo} alt="BDMLOGO"/>
+            <img className="bdm-logo" src={puma_logo} alt="BDMLOGO"/>
             </div>
         )
     }
