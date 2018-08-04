@@ -31,6 +31,12 @@ class Controls extends Component {
         this.setState({status: "set", seconds: ""})
         window.controls_com.postMessage({status: "isReset", seconds: "0"})
     }
+    onTick = () => {
+        console.log("tick")
+    }
+    onComplete = () => {
+        console.log("complete")
+    }
     render() {
         return (
             <div className="card border-dark">
@@ -41,7 +47,7 @@ class Controls extends Component {
                     case "isStart":
                     return (
                         <React.Fragment>
-                        Controles: <Countdown date={Date.now() + (this.state.seconds * 1000)} renderer={props => <React.Fragment>{props.total / 1000}</React.Fragment>}/>
+                        Controles: <Countdown date={Date.now() + (this.state.seconds * 1000)} onTick={this.onTick} onComplete={this.onComplete} renderer={props => <React.Fragment>{props.total / 1000}</React.Fragment>}/>
                         </React.Fragment>
                     )
                     default:
