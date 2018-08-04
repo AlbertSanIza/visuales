@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Countdown from 'react-countdown-now'
+import './controls.css'
 
 class Controls extends Component {
     constructor(props) {
@@ -49,7 +50,10 @@ class Controls extends Component {
                     case "isStart":
                     return (
                         <React.Fragment>
-                        Controles: <Countdown date={Date.now() + (this.state.seconds * 1000)} onTick={this.onTick} onComplete={this.onComplete} renderer={props => <React.Fragment>{props.total / 1000}</React.Fragment>}/>
+                        Controles
+                        <div className="countdown">
+                        <Countdown date={Date.now() + (this.state.seconds * 1000)} onTick={this.onTick} onComplete={this.onComplete} renderer={props => <React.Fragment>{props.total / 1000}</React.Fragment>}/>
+                        </div>
                         </React.Fragment>
                     )
                     default:
