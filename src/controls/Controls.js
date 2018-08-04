@@ -45,19 +45,19 @@ class Controls extends Component {
             <div className="card border-dark">
             <div className="card-header">
             <b>
+            Controles
             {(() => {
                 switch (this.state.status) {
                     case "isStart":
                     return (
                         <React.Fragment>
-                        Controles
                         <div className="countdown">
                         <Countdown date={Date.now() + (this.state.seconds * 1000)} onTick={this.onTick} onComplete={this.onComplete} renderer={props => <React.Fragment>{props.total / 1000}</React.Fragment>}/>
                         </div>
                         </React.Fragment>
                     )
                     default:
-                    return "Controles"
+                    return ""
                 }
             })()}
             </b>
