@@ -16,13 +16,7 @@ class Visualizer extends Component {
     render() {
         return (
             <div className="visualizer fade-in">
-            <div>
-            Visualizer
-            <br/>
-            {this.state.status} - {this.state.seconds}
-            <br/>
-            <img className="logo" src={bdm_logo} alt="BDMLOGO"/>
-            </div>
+            <img className="bdm-logo" src={bdm_logo} alt="BDMLOGO"/>
             </div>
         )
     }
