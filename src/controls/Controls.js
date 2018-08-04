@@ -20,15 +20,15 @@ class Controls extends Component {
     }
     startButton = () => {
         this.setState({status: "isStart"})
-        window.controls_com.postMessage({status: "isStart", seconds: ""})
+        window.controls_com.postMessage({status: "isStart", seconds: this.state.seconds})
     }
     pauseButton = () => {
         this.setState({status: "isSet"})
-        window.controls_com.postMessage({status: "isSet", seconds: ""})
+        window.controls_com.postMessage({status: "isPause", seconds: this.state.seconds})
     }
     resetButton = () => {
         this.setState({status: "set", seconds: ""})
-        window.controls_com.postMessage({status: "set", seconds: ""})
+        window.controls_com.postMessage({status: "isReset", seconds: "0"})
     }
     render() {
         return (
