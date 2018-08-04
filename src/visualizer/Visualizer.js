@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import bdm_logo from "./bdm.png"
 import "./Visualizer.css"
 
 class Visualizer extends Component {
@@ -19,6 +20,8 @@ class Visualizer extends Component {
             Visualizer
             <br/>
             {this.state.status} - {this.state.seconds}
+            <br/>
+            <img className="logo" src={bdm_logo} alt="BDMLOGO"/>
             </div>
             </div>
         )
