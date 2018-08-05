@@ -9,7 +9,7 @@ import Footer from './footer/Footer.js'
 class App extends Component {
     render() {
         return (
-            <Router>
+            <Router basename="/visuales-web">
             <div>
             <Route exact path="/" component={({match}) => (
                 <div className="container fade-in">
