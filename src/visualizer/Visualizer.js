@@ -50,6 +50,15 @@ class Visualizer extends Component {
                     )
                 }
             })()}
+            {(() => {
+                if((this.state.status === "isSet" || this.state.status === "isStart") && this.state.text !== "") {
+                    return (
+                        <div className="visualizer-text fade-in">
+                        {this.state.text}
+                        </div>
+                    )
+                }
+            })()}
             </div>
         )
     }
