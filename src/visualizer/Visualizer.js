@@ -16,7 +16,8 @@ class Visualizer extends Component {
         super(props)
         this.state = {
             status: "set",
-            seconds: ""
+            seconds: "",
+            text: "CRANEO"
         }
     }
     componentDidMount() {
