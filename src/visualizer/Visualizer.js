@@ -5,7 +5,7 @@ import bdm_logo from "./bdm.png"
 import "./Visualizer.css"
 
 const VisualizerHeader = () => (
-    <div className="visualizer-header">
+    <div className="visualizer-header fade-in">
     <img className="bdm-logo-sm" src={bdm_logo} alt="LOGO"/>
     <img className="puma-logo-sm" src={puma_logo} alt="LOGO"/>
     </div>
