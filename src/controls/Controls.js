@@ -38,7 +38,7 @@ class Controls extends Component {
     }
     onComplete = () => {
         this.setState({status: "set", seconds: ""})
-        window.controls_com.postMessage({status: "isReset", seconds: "0"})
+        window.controls_com.postMessage({status: "isStart", status: "isReset", seconds: "0"})
     }
     render() {
         return (
