@@ -36,6 +36,15 @@ class Visualizer extends Component {
                     )
                 }
             })()}
+            {(() => {
+                if(this.state.status === "isSet" || this.state.status === "isStart") {
+                    return (
+                        <div className="visualizer-countdown fade-in">
+                        {this.state.seconds}
+                        </div>
+                    )
+                }
+            })()}
             <Particles className="particles" params={{
                 "particles": {
                     "number": {
