@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
 import Particles from 'react-particles-js'
-import puma_logo from "./puma.svg"
+import puma_logo from "./puma.png"
 import bdm_logo from "./bdm.png"
 import "./Visualizer.css"
+
+const VisualizerHeader = () => (
+    <div className="visualizer-header">
+    <img className="bdm-logo-sm" src={bdm_logo} alt="LOGO"/>
+    <img className="puma-logo-sm" src={puma_logo} alt="LOGO"/>
+    </div>
+)
 
 class Visualizer extends Component {
     constructor(props) {
@@ -18,6 +25,7 @@ class Visualizer extends Component {
     render() {
         return (
             <div className="visualizer flex fade-in">
+            <VisualizerHeader/>
             <Particles className="particles" params={{
                 "particles": {
                     "number": {
@@ -57,8 +65,6 @@ class Visualizer extends Component {
                     }
                 }
             }}/>
-            <img className="bdm-logo" src={bdm_logo} alt="BDMLOGO"/>
-            <img className="bdm-logo" src={puma_logo} alt="BDMLOGO"/>
             </div>
         )
     }
