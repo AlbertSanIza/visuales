@@ -28,6 +28,10 @@
     height: 80%;
     filter: invert(100%);
 }
+.bdm-logo-center {
+    height: 80%;
+    z-index: 1;
+}
 .flex {
     display: flex;
     align-items: center;
