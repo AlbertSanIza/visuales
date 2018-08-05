@@ -7,7 +7,8 @@ class Controls extends Component {
         super(props)
         this.state = {
             status: "set",
-            seconds: ""
+            seconds: "",
+            text: ""
         }
     }
     componentDidMount() {
@@ -18,25 +19,28 @@ class Controls extends Component {
     inputHandleChange = e => {
         this.setState({seconds: e.target.value})
     }
+    inputTextHandleChange = e => {
+        this.setState({text: e.target.value})
+    }
     setButton = () => {
         this.setState({status: "isSet"})
-        window.controls_com.postMessage({status: "isSet", seconds: this.state.seconds})
+        window.controls_com.postMessage({status: "isSet", seconds: this.state.seconds, text: this.state.text})
     }
     startButton = () => {
         this.setState({status: "isStart"})
-        window.controls_com.postMessage({status: "isStart", seconds: this.state.seconds})
+        window.controls_com.postMessage({status: "isStart", seconds: this.state.seconds, text: this.state.text})
     }
     pauseButton = () => {
         this.setState({status: "isSet"})
-        window.controls_com.postMessage({status: "isPause", seconds: this.state.seconds})
+        window.controls_com.postMessage({status: "isPause", seconds: this.state.seconds, text: this.state.text})
     }
     resetButton = () => {
-        this.setState({status: "set", seconds: ""})
-        window.controls_com.postMessage({status: "isReset", seconds: "0"})
+        this.setState({status: "set", seconds: "", text: ""})
+        window.controls_com.postMessage({status: "isReset", seconds: "0", text: this.state.text})
     }
     onTick = () => {
         this.setState({seconds: this.state.seconds - 1})
-        window.controls_com.postMessage({status: "isStart", seconds: this.state.seconds})
+        window.controls_com.postMessage({status: "isStart", seconds: this.state.seconds, text: this.state.text})
     }
     onComplete = () => {
         this.setState({status: "set", seconds: ""})
@@ -65,6 +69,8 @@ class Controls extends Component {
             </b>
             </div>
             <div className="card-body">
+            <input className="form-control" type="text" placeholder="Tema" disabled={this.state.status !== "set"} value={this.state.text} onChange={this.inputTextHandleChange}/>
+            <br/>
             <div className="input-group input-group-sm mb-3">
             <input className="form-control" type="number" placeholder="Tiempo" min="5" disabled={this.state.status !== "set"} value={this.state.seconds} onChange={this.inputHandleChange}/>
             <div className="input-group-append">
