@@ -23,7 +23,7 @@ class Visualizer extends Component {
         window.controls_com.onmessage = ev => {
             this.setState(ev.data)
         }
-        window.particlesJS.load('particles-js', '../particles-config.json')
+        window.particlesJS.load('particles-js', 'particles-config.json')
     }
     render() {
         return (
