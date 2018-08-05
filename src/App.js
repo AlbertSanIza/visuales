@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 import Header from './header/Header.js'
 import Controls from './controls/Controls.js'
 import VisualizerHolder from './visualizerHolder/VisualizerHolder.js'
@@ -9,7 +9,7 @@ import Footer from './footer/Footer.js'
 class App extends Component {
     render() {
         return (
-            <Router basename="/visuales-web">
+            <HashRouter>
             <div>
             <Route exact path="/" component={({match}) => (
                 <div className="container fade-in">
@@ -35,7 +35,7 @@ class App extends Component {
             )}/>
             <Route exact path="/visualizer" component={Visualizer}/>
             </div>
-            </Router>
+            </HashRouter>
         )
     }
 }
