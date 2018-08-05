@@ -11,7 +11,7 @@
     position: absolute;
     top: 0px;
     width: 100%;
-    height: 20%;
+    height: 30%;
     z-index: 1;
 }
 .visualizer-countdown {
@@ -23,16 +23,16 @@
 }
 .bdm-logo-sm {
     float: left;
-    margin-top: 5%;
-    margin-left: 60px;
+    margin-top: 3%;
+    margin-left: 70px;
     height: 100%;
 }
 .puma-logo-sm {
     position: relative;
     float: right;
-    margin-top: calc(5% + 10px);
-    margin-right: 60px;
-    height: 80%;
+    margin-top: calc(3% + 10px);
+    margin-right: 70px;
+    height: 90%;
     filter: invert(100%);
 }
 .bdm-logo-center {
