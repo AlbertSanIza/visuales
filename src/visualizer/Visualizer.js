@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Particles from 'react-particles-js'
+import 'particles.js/particles'
 import puma_logo from "./puma.png"
 import bdm_logo from "./bdm.png"
 import "./Visualizer.css"
@@ -18,16 +18,17 @@ class Visualizer extends Component {
             status: "set",
             seconds: ""
         }
-
     }
     componentDidMount() {
         window.controls_com.onmessage = ev => {
             this.setState(ev.data)
         }
+        window.particlesJS.load('particles-js', 'particles-config.json')
     }
     render() {
         return (
             <div className="visualizer flex fade-in">
+            <div id="particles-js" className="particles"></div>
             {(() => {
                 if(this.state.status === "isSet" || this.state.status === "isStart") {
                     return (
@@ -48,45 +49,6 @@ class Visualizer extends Component {
                     )
                 }
             })()}
-            <Particles className="particles" params={{
-                "particles": {
-                    "number": {
-                        "value": 70,
-                        "density": {
-                            "enable": true,
-                            "value_area": 1400
-                        }
-                    },
-                    "color": {
-                        "value": "#ff0000"
-                    },
-                    "size": {
-                        "value": 5,
-                        "random": true,
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#ff0000",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 6,
-                        "direction": "none",
-                        "random": false,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": false,
-                            "rotateX": 600,
-                            "rotateY": 1200
-                        }
-                    }
-                }
-            }}/>
             </div>
         )
     }
