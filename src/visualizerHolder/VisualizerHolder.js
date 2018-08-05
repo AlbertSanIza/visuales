@@ -9,13 +9,13 @@ class VisualizerHolder extends Component {
             <div className="card-header">
             <b>Vista Anticipada</b>
             <span className="float-right">
-            <a href="/visuales-web/visualizer" target="_blank" rel="noopener noreferrer">
+            <a href="#/visualizer" target="_blank" rel="noopener noreferrer">
             <img className="logo" src={linkLogo} alt=""/>
             </a>
             </span>
             </div>
             <div className="card-body">
-            <iframe className="visualizer-holder" src="/visuales-web/visualizer" frameBorder="0" title="visualizer"></iframe>
+            <iframe className="visualizer-holder" src="#/visualizer" frameBorder="0" title="visualizer"></iframe>
             </div>
             </div>
         )
