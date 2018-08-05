@@ -26,7 +26,7 @@ class Visualizer extends Component {
         return (
             <div className="visualizer flex fade-in">
             {(() => {
-                if(this.state.status === "isStart") {
+                if(this.state.status === "isSet" || this.state.status === "isStart") {
                     return (
                         <VisualizerHeader/>
                     )
