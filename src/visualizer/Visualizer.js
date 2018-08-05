@@ -18,6 +18,9 @@ class Visualizer extends Component {
             status: "set",
             seconds: ""
         }
+
+    }
+    componentDidMount() {
         window.controls_com.onmessage = ev => {
             this.setState(ev.data)
         }

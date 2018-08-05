@@ -9,6 +9,8 @@ class Controls extends Component {
             status: "set",
             seconds: ""
         }
+    }
+    componentDidMount() {
         window.visualizer_com.onmessage = ev => {
             console.log(ev.data)
         }
