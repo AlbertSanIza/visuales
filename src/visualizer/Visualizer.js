@@ -30,6 +30,10 @@ class Visualizer extends Component {
                     return (
                         <VisualizerHeader/>
                     )
+                } else {
+                    return (
+                        <img className="bdm-logo-center fade-in" src={bdm_logo} alt="LOGO"/>
+                    )
                 }
             })()}
             <Particles className="particles" params={{
