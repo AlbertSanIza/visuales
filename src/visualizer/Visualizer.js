@@ -22,6 +22,9 @@ class Visualizer extends Component {
     }
     componentDidMount() {
         window.controls_com.onmessage = ev => {
+            if(ev.data.text) {
+                ev.data.text = ev.data.text.toUpperCase()
+            }
             this.setState(ev.data)
         }
         window.particlesJS.load('particles-js', 'particles-config.json')
