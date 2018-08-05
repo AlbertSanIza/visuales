@@ -25,7 +25,13 @@ class Visualizer extends Component {
     render() {
         return (
             <div className="visualizer flex fade-in">
-            <VisualizerHeader/>
+            {(() => {
+                if(this.state.status === "isStart") {
+                    return (
+                        <VisualizerHeader/>
+                    )
+                }
+            })()}
             <Particles className="particles" params={{
                 "particles": {
                     "number": {
